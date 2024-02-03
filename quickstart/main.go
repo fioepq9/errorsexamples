@@ -43,26 +43,28 @@ func main() {
 	errors.C.Style = errors.StyleStack
 
 	fmt.Println(baz("new"))
+
+	fmt.Println("=====================================")
+
 	fmt.Println(baz("wrap"))
 }
 
 /*
 foo
-  main.go:12 (0x658aba) main.foo()
-  main.go:23 (0x658b7a) main.bar()
-  main.go:34 (0x658c3a) main.baz()
-  main.go:46 (0x658d24) main.main()
-  D:/apps/scoop/apps/go/current/src/runtime/proc.go:267 (0x605411) runtime.main()
-
+  D:/code/projects/errorsexamples/quickstart/main.go:12 (0x457eda) main.foo()
+  D:/code/projects/errorsexamples/quickstart/main.go:23 (0x457f9a) main.bar()
+  D:/code/projects/errorsexamples/quickstart/main.go:34 (0x45805a) main.baz()
+  D:/code/projects/errorsexamples/quickstart/main.go:45 (0x458133) main.main()
+  D:/apps/scoop/apps/go/current/src/runtime/proc.go:267 (0x405231) runtime.main()
+=====================================
 foo
-  main.go:12 (0x658aba) main.foo()
+  D:/code/projects/errorsexamples/quickstart/main.go:12 (0x457eda) main.foo()
 this is wrapeed foo
-  main.go:14 (0x658af5) main.foo()
+  D:/code/projects/errorsexamples/quickstart/main.go:14 (0x457f15) main.foo()
 this is wrapeed bar
-  main.go:25 (0x658bb5) main.bar()
+  D:/code/projects/errorsexamples/quickstart/main.go:25 (0x457fd5) main.bar()
 this is wrapeed baz
-  main.go:36 (0x658c75) main.baz()
-  main.go:47 (0x658d6e) main.main()
-  D:/apps/scoop/apps/go/current/src/runtime/proc.go:267 (0x605411) runtime.main()
-
+  D:/code/projects/errorsexamples/quickstart/main.go:36 (0x458095) main.baz()
+  D:/code/projects/errorsexamples/quickstart/main.go:49 (0x4581bb) main.main()
+  D:/apps/scoop/apps/go/current/src/runtime/proc.go:267 (0x405231) runtime.main()
 */
